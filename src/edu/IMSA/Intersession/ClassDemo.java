@@ -109,8 +109,22 @@ public class ClassDemo {  // public class must be the filename, one per file
 }
 
 class Student {
+    private long studentID=-1;
+    private String grade;
     
+    void setID(long id) {
+        studentID = id;
+    }
+    protected void setGrade(String g)
+    {
+        grade = g;
+    }
+    public String getGrade()
+    {
+        return grade;
+    }
 }
+
 class Attendance  // extra none public class is OK
 {
     

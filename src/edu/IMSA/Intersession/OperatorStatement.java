@@ -7,7 +7,7 @@ package edu.IMSA.Intersession;
 
 /**
  *
- * @author Andy
+ * @author WXU
  */
 public class OperatorStatement {
     public void precedence()
