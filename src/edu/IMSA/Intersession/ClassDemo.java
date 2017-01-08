@@ -30,13 +30,7 @@ public class ClassDemo {  // public class must be the filename, one per file
         System.out.println("ClassDemo instance initializer block "+studentsToday);
         studentsToday=-1;
     }
-    public boolean equals(Object right)  // Object is a class every other java class inherit from
-    {
-        if (right==null || !(right instanceof ClassDemo) )
-            return false;
-        ClassDemo otherDemo =(ClassDemo)right;
-        return studentsToday==otherDemo.studentsToday;
-    }
+    
     public void addStudent()
     {
         studentsToday++;

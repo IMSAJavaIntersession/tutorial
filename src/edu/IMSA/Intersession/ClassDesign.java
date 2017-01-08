@@ -16,6 +16,15 @@ public class ClassDesign extends ClassDemo {
         System.out.println("ClassDesign constructor");
     }
     
+    public boolean equals(Object right)  // Object is a class every other java class inherit from
+    {
+        if (right==null || !(right instanceof ClassDesign) )
+            return false;
+        ClassDesign otherDemo =(ClassDesign)right;
+        return studentsToday==otherDemo.studentsToday;
+    }
+    
+    
     public static void main(String[] main) 
     {
         new ClassDesign(); // constructor sequence for inheritance

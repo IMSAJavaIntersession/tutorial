@@ -6,7 +6,7 @@
 package edu.IMSA.Intersession;
 
 import java.io.IOException;
-
+import static java.util.Arrays.asList;  // for static members
 /**
  *
  * @author WXU
@@ -112,5 +112,28 @@ public class MethodEncapsulation {
     }
     static {  // static initializer can be used for constant (but not in both places)
         MAX_COUNT=999999999;
+    }
+    
+    // pass by value
+    static public void passByValue(String str, StringBuilder build)
+    {
+        str += "NOCHANGE";
+        build.append("CHANGED");
+    }
+            
+    // overload rules, different param types
+    // return type, modifiers can vary but cannot be the only differences
+    public void overload(int i){}
+    public int overload(){return 0;}
+    //public int overload(int i){return 0;}
+    //static final public void overload(int i) throws Exception{}
+    
+    public static void main(String[] args)
+    {
+        String str = "value ";
+        StringBuilder build = new StringBuilder("value ");
+        passByValue(str, build);
+        System.out.println(str);
+        System.out.println(build);
     }
 }
