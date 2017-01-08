@@ -5,7 +5,7 @@
  */
 package edu.IMSA.Intersession;  // must be before imports and class if present
 
-import java.util.*;             // must be before class and after package if present
+import java.util.*;        // must be before class and after package if present
 
 /**
  *
@@ -27,7 +27,7 @@ public class ClassDemo {  // public class must be the filename, one per file
     
     int studentsToday;
     {
-        System.out.println("ClassDemo instance initializer block "+studentsToday);
+        System.out.println("ClassDemo instance initializer "+studentsToday);
         studentsToday=-1;
     }
     
@@ -42,11 +42,13 @@ public class ClassDemo {  // public class must be the filename, one per file
         // what is the order of automatic type conversion
         // what is suffix f or L used for, e.g. 6L, 5.0f
         // format for diffenr type of integer base, octal, hexadecimal, binary
-        // negative integer and Two's Complement, http://www.cs.cornell.edu/~tomf/notes/cps104/twoscomp.html
+        // negative integer and Two's Complement, 
+        //    http://www.cs.cornell.edu/~tomf/notes/cps104/twoscomp.html
     }
     
-    // follow camelCase rule for variables and methods, CamelCase rule for class name
-    // use all capital letters for constant values (static final), avoid magic number
+    // camelCase rule for variables and methods, CamelCase rule for class name
+    // use all capital letters for constant values (static final)
+    // avoid magic number
     public void identifierAndDecalration()
     {
         // practice how to declare and initialize variables
@@ -64,13 +66,14 @@ public class ClassDemo {  // public class must be the filename, one per file
     //public static void main(String ...args)
     //static public final void main(String[] main)
     //final static public void main(String[] main)
-    public static void main(String[] main) // all 4 variations works, this one is canonical form
-    {
+    public static void main(String[] main) 
+    {   // all 4 variations works, this one is canonical form
         System.out.println("total "+totalStudents);
         System.out.println("arg lenght: "+main.length);
         
         ClassDemo demo; // demo is reference type, local scope, uninitialized
-        demo = new ClassDemo(); // create a new object, assigned to demo, watch initialization sequence
+        // create a new object, assigned to demo, watch initialization sequence
+        demo = new ClassDemo(); 
         ClassDemo demo2=new ClassDemo();
         System.out.println("compare reference "+(demo==demo2));
         System.out.println("compare value "+(demo.equals(demo2)));
@@ -81,9 +84,10 @@ public class ClassDemo {  // public class must be the filename, one per file
         demo2 = demo;   // how about now
         demo3=demo2;    // how about now
         
-        {   // test block scope, variable initialization, and function call with parameters
+        {   // test block scope, var initialization, function call with param
             int score;
-            score = 88; // does it compile if this line is commented out (compare to instance variablen initialization)
+            // does it compile if this line is commented out
+            score = 88; // (compare to instance variablen initialization)
             String grade ="B+";
             passByValue(score, grade);
             System.out.println("Final score is "+score+" grade " +grade);

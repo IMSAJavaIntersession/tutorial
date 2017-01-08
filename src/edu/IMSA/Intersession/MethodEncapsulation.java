@@ -124,7 +124,9 @@ public class MethodEncapsulation {
     // overload rules, different param types
     // return type, modifiers can vary but cannot be the only differences
     public void overload(int i){}
-    public int overload(){return 0;}
+    public void overload(Integer i){}
+    public void overload(short i){}
+    public int  overload(){return 0;}
     //public int overload(int i){return 0;}
     //static final public void overload(int i) throws Exception{}
     
