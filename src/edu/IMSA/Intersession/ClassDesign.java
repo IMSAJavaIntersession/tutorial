@@ -9,11 +9,16 @@ package edu.IMSA.Intersession;
  *
  * @author WXU
  */
+// class can be either public or default
+// private class  test{}
+// protected class  test{}
+// All classes extends from Java.lang.Object
 public class ClassDesign extends ClassDemo {
-    
-    public ClassDesign()
+       
+    public ClassDesign(String oneParam)
     {
-        System.out.println("ClassDesign constructor");
+        super();// must be first statement, compiler will insert if not present        
+        System.out.println("ClassDesign constructor "+oneParam);
     }
     
     public boolean equals(Object right)  // Object is a class every other java class inherit from
@@ -27,6 +32,16 @@ public class ClassDesign extends ClassDemo {
     
     public static void main(String[] main) 
     {
-        new ClassDesign(); // constructor sequence for inheritance
+        new ClassDesign("test"); // constructor sequence for inheritance
+        new ClassDesign2();
+    }
+}
+
+class ClassDesign2 extends ClassDesign
+{    
+    public ClassDesign2()
+    {
+        super("call one param");  // does it compile if comment out
+        System.out.println("ClassDesign2 constructor no argument");
     }
 }

@@ -57,8 +57,8 @@ public class CoreAPI {
         System.out.println(numList2+" "+numList2.size());  // what is expected?
         numList2.set(1, 2);
         System.out.println(numList2+" "+numList2.size());   // predict outcome
-        //numList2.add(5);
-        System.out.println(numList2+" "+numList2.size());   // predict outcome before uncommenting it
+        //numList2.add(5); // predict outcome before uncommenting it
+        System.out.println(numList2+" "+numList2.size());
     }
     
     public static void main(String args[])
